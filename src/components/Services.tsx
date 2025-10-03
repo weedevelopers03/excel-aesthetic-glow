@@ -35,18 +35,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-24 bg-background">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block bg-primary/10 px-4 py-2 rounded-full mb-4">
-            <span className="text-sm font-medium text-primary">Our Services</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-            Transform Your Look with
-            <span className="block text-gradient">Expert Care</span>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-5xl font-display font-normal mb-6 uppercase tracking-tight">
+            <span className="text-foreground">Our Premium</span>{" "}
+            <span className="text-primary">Services</span>
           </h2>
-          <p className="text-lg text-foreground/70">
+          <p className="text-base text-foreground/60 leading-relaxed">
             Discover our comprehensive range of non-surgical aesthetic treatments designed to enhance your natural beauty.
           </p>
         </div>
@@ -56,32 +53,32 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 hover-lift"
+              className="group overflow-hidden bg-card border-border/50 hover:border-primary/30 transition-all duration-500"
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-72 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
               </div>
 
               {/* Content */}
               <div className="p-8">
-                <h3 className="text-2xl font-display font-bold mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-display font-normal mb-4 uppercase tracking-wide group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-foreground/70 mb-6">
+                <p className="text-foreground/60 mb-6 leading-relaxed text-sm">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-foreground/60">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
+                    <li key={idx} className="flex items-center text-sm text-foreground/50">
+                      <div className="w-1 h-1 rounded-full bg-primary mr-3" />
                       {feature}
                     </li>
                   ))}
@@ -90,7 +87,7 @@ const Services = () => {
                 {/* CTA */}
                 <Button 
                   variant="ghost" 
-                  className="group/btn p-0 h-auto font-medium text-primary hover:text-accent transition-colors"
+                  className="group/btn p-0 h-auto text-primary hover:text-primary/80 transition-colors uppercase text-xs tracking-wider"
                 >
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -101,10 +98,10 @@ const Services = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-wider text-xs font-semibold px-8"
           >
             View All Services
           </Button>

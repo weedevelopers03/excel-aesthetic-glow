@@ -8,105 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 24 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 40 70% 75%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 30 40% 90%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 30 20% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 38 92% 50%;
+    --accent: 40 70% 75%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 85%;
-    --ring: 24 100% 50%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 40 70% 75%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
     
-    /* Custom design tokens */
-    --gold: 38 92% 50%;
-    --rose-gold: 24 100% 50%;
-    --champagne: 42 78% 85%;
+    /* Custom design tokens - Professional dark theme */
+    --gold: 40 70% 75%;
+    --dark-bg: 0 0% 7%;
+    --dark-card: 0 0% 10%;
+    --dark-overlay: 0 0% 12%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(24 100% 50% / 0.1), hsl(38 92% 50% / 0.05));
-    --gradient-overlay: linear-gradient(90deg, hsl(0 0% 5% / 0.9) 0%, hsl(0 0% 5% / 0.4) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 10% / 0.8), hsl(0 0% 7% / 0.95));
+    --gradient-overlay: linear-gradient(90deg, hsl(0 0% 7% / 0.95) 0%, hsl(0 0% 7% / 0.4) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 12%), hsl(0 0% 8%));
     
-    --shadow-glow: 0 0 60px hsl(24 100% 50% / 0.3);
-    --shadow-elegant: 0 20px 60px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(40 70% 75% / 0.15);
+    --shadow-elegant: 0 10px 40px hsl(0 0% 0% / 0.5);
     
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    --radius: 0;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
-
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 24 100% 50%;
-    --primary-foreground: 0 0% 5%;
-
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 5%;
-
-    --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 0 0% 95%;
-
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 24 100% 50%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 40 70% 75%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 40 70% 75%;
   }
 }
 
@@ -117,6 +72,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    background-color: hsl(var(--dark-bg));
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -126,7 +82,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply text-primary;
   }
   
   .hover-lift {

@@ -5,20 +5,17 @@ import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 bg-background">
+      <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div>
-              <div className="inline-block bg-primary/10 px-4 py-2 rounded-full mb-4">
-                <span className="text-sm font-medium text-primary">Get in Touch</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                Ready to Begin Your
-                <span className="block text-gradient">Beauty Journey?</span>
+              <h2 className="text-4xl md:text-5xl font-display font-normal mb-6 uppercase tracking-tight">
+                <span className="text-foreground">Ready to Begin Your</span>{" "}
+                <span className="text-primary block mt-2">Beauty Journey?</span>
               </h2>
-              <p className="text-lg text-foreground/70 mb-8">
+              <p className="text-base text-foreground/60 mb-10 leading-relaxed">
                 Schedule your free consultation today and discover how we can help you achieve your aesthetic goals.
               </p>
 
@@ -93,41 +90,42 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-2xl font-display font-bold mb-6">Send Us a Message</h3>
+            <div className="bg-card border border-border/50 p-10">
+              <h3 className="text-2xl font-display font-normal mb-8 uppercase tracking-wide">Send Us a Message</h3>
               <form className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">First Name</label>
-                    <Input placeholder="John" />
+                    <label className="block text-xs font-medium mb-2 uppercase tracking-wide text-foreground/60">First Name</label>
+                    <Input placeholder="John" className="bg-background/50 border-border/50" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Last Name</label>
-                    <Input placeholder="Doe" />
+                    <label className="block text-xs font-medium mb-2 uppercase tracking-wide text-foreground/60">Last Name</label>
+                    <Input placeholder="Doe" className="bg-background/50 border-border/50" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input type="email" placeholder="john@example.com" />
+                  <label className="block text-xs font-medium mb-2 uppercase tracking-wide text-foreground/60">Email</label>
+                  <Input type="email" placeholder="john@example.com" className="bg-background/50 border-border/50" />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Phone</label>
-                  <Input type="tel" placeholder="(305) 123-4567" />
+                  <label className="block text-xs font-medium mb-2 uppercase tracking-wide text-foreground/60">Phone</label>
+                  <Input type="tel" placeholder="(305) 123-4567" className="bg-background/50 border-border/50" />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-xs font-medium mb-2 uppercase tracking-wide text-foreground/60">Message</label>
                   <Textarea 
                     placeholder="Tell us about your aesthetic goals..."
                     rows={5}
+                    className="bg-background/50 border-border/50"
                   />
                 </div>
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-wider text-xs font-semibold"
                   size="lg"
                 >
                   Book Free Consultation
